@@ -635,6 +635,77 @@
             font-size: 0.95rem;
         }
 
+        /* Partners Section */
+        .partners {
+            padding: 80px 5%;
+            background: var(--light);
+            overflow: hidden;
+        }
+
+        .partners-carousel {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 40px;
+            animation: scroll 25s linear infinite;
+            width: max-content;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .partner-logo {
+            flex-shrink: 0;
+            width: 160px;
+            height: 100px;
+            background: var(--white);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--dark);
+            text-align: center;
+            border: 2px solid #E2E8F0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .partner-logo:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px rgba(0, 119, 182, 0.15);
+            transform: scale(1.05);
+        }
+
+        .partner-logo small {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        .partner-logo br {
+            display: block;
+            margin-bottom: 2px;
+        }
+
         /* Reviews Section */
         .reviews {
             padding: 100px 5%;
@@ -1344,6 +1415,38 @@
                         <h4>Kristiina L.</h4>
                         <span>Tallinn</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Partnerid</span>
+                <h2 class="section-title">Meie Koostööpartnerid</h2>
+                <p class="section-description">Töötame koos juhtivate ettevõtetega, et pakkuda parimat teenust.</p>
+            </div>
+            <div class="partners-carousel">
+                <div class="carousel-track">
+                    <div class="partner-logo">1Partner</div>
+                    <div class="partner-logo">FEB <small>ahlsell</small></div>
+                    <div class="partner-logo">Ramirent</div>
+                    <div class="partner-logo">Würth</div>
+                    <div class="partner-logo">Cramo</div>
+                    <div class="partner-logo">Astlanda<br>Ehitus</div>
+                    <div class="partner-logo">Stokker</div>
+                    <div class="partner-logo">Majaküte</div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="partner-logo">1Partner</div>
+                    <div class="partner-logo">FEB <small>ahlsell</small></div>
+                    <div class="partner-logo">Ramirent</div>
+                    <div class="partner-logo">Würth</div>
+                    <div class="partner-logo">Cramo</div>
+                    <div class="partner-logo">Astlanda<br>Ehitus</div>
+                    <div class="partner-logo">Stokker</div>
+                    <div class="partner-logo">Majaküte</div>
                 </div>
             </div>
         </div>
